@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    height: 100%;
+}
+#board{
+    height: 1vh;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border: solid black 1px;
+}
