@@ -1,26 +1,21 @@
 const board = document.querySelector('#board');
 const square = board.querySelectorAll('.square');
-
-const player = (name, side) => {
-    const place = () => {
-        console.log(`placed ${side}`);
-    }
-    return {name, side, place};
-};
-
-const player1 = player('joe', 'x');
-const player2 = player('john', 'o');
-
-
+let gameBoard = ["", "", "",
+                 "", "", "",
+                 "", "", "",];
 let player1Move = true;
-square.forEach(square => {
+let player1 = "";
+let player2 = "";
+square.forEach((square, squareIndex) => {
     square.addEventListener('click', () => {
-        if(square.innerHTML === ""){
+        console.log(squareIndex);
+        if(gameBoard[squareIndex] === ""){
             square.innerHTML = `${(player1Move ? "x" : "o")}`;
+            gameBoard[squareIndex] = `${(player1Move ? "x" : "o")}`;
             player1Move = !player1Move
+            console.log(gameBoard)
         }
     });
 });
 
 
-player1.place();
