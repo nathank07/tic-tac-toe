@@ -3,14 +3,13 @@ body{
     height: 100%;
 }
 #board{
-    height: 1vh;
+    height: 500px;
+    width: 500px;
     display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 .square{
-    width: 100px;
-    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
