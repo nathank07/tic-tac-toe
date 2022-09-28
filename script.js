@@ -21,6 +21,8 @@ const Board = (gridSize) => {
         return boardArr;
     }
     let gameBoard = createBoard(gridSize);
+    boardDiv.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
+    boardDiv.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
     const rowCoordinates = () => {
         let gameBoard2D = [];
         for(let i = 0; i < gameBoard.length; i += gridSize){
@@ -87,4 +89,4 @@ const Board = (gridSize) => {
     return {createBoard, rowCoordinates, columnCoordinates, lDiagCoordinates, rDiagCoordinates, checkForWin}
 }
 
-const board = Board(3);
+const board = Board(4);

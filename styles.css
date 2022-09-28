@@ -3,16 +3,13 @@ body{
     height: 100%;
 }
 #board{
-    height: 500px;
-    width: 500px;
+    width:500px;
+    aspect-ratio: 1/1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
 }
 .square{
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1/1;
     border: solid black 1px;
 }
